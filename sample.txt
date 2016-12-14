@@ -1,0 +1,73 @@
+Last login: Tue Dec 13 19:57:27 on ttys000
+Dicks-MacBook-Pro:~ Nigthwing$ cd Desktop
+Dicks-MacBook-Pro:Desktop Nigthwing$ mkdir basic_repo
+Dicks-MacBook-Pro:Desktop Nigthwing$ cd basic_repo
+Dicks-MacBook-Pro:basic_repo Nigthwing$ open .
+Dicks-MacBook-Pro:basic_repo Nigthwing$ touch index.html sample.txt styles.css
+Dicks-MacBook-Pro:basic_repo Nigthwing$ open index.html
+Dicks-MacBook-Pro:basic_repo Nigthwing$ git init
+Initialized empty Git repository in /Users/Nigthwing/Desktop/basic_repo/.git/
+Dicks-MacBook-Pro:basic_repo Nigthwing$ git add .
+Dicks-MacBook-Pro:basic_repo Nigthwing$ git commit -m "initial commit"
+[master (root-commit) 89eb97f] initial commit
+ 3 files changed, 1 insertion(+)
+ create mode 100644 index.html
+ create mode 100644 sample.txt
+ create mode 100644 styles.css
+Dicks-MacBook-Pro:basic_repo Nigthwing$ git status
+On branch master
+nothing to commit, working tree clean
+Dicks-MacBook-Pro:basic_repo Nigthwing$ git remote add origin https://github.com/pwinnett/basic_repo.git
+Dicks-MacBook-Pro:basic_repo Nigthwing$ git push -u origin master
+Username for 'https://github.com': pwinnett
+Password for 'https://pwinnett@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/pwinnett/basic_repo.git/'
+Dicks-MacBook-Pro:basic_repo Nigthwing$ git remote add origin https://github.com/pwinnett/basic_repo.git
+fatal: remote origin already exists.
+Dicks-MacBook-Pro:basic_repo Nigthwing$ git push -u origin master
+Username for 'https://github.com': pwinnett
+Password for 'https://pwinnett@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 275 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/pwinnett/basic_repo.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+Dicks-MacBook-Pro:basic_repo Nigthwing$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dicks-MacBook-Pro:basic_repo Nigthwing$ git add .
+Dicks-MacBook-Pro:basic_repo Nigthwing$ git commit -m "update files info"
+[master ba5be60] update files info
+ 1 file changed, 17 insertions(+)
+Dicks-MacBook-Pro:basic_repo Nigthwing$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+Dicks-MacBook-Pro:basic_repo Nigthwing$ git push orgin master
+fatal: 'orgin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Dicks-MacBook-Pro:basic_repo Nigthwing$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 442 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/pwinnett/basic_repo.git
+   89eb97f..ba5be60  master -> master
+Dicks-MacBook-Pro:basic_repo Nigthwing$
+
